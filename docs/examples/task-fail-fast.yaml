@@ -1,0 +1,27 @@
+apiVersion: batuta/v1
+kind: Task
+metadata:
+  project: demo
+  name: migrate-then-deploy
+spec:
+  priority: high
+  continuity: FAIL_FAST
+  timeout: 20m
+  steps:
+    - id: migrate
+      name: Apply database migrations
+      executor:
+        type: process
+        executable: ./bin/migrate
+        args: ["up"]
+        cwd: /workspace/app
+        timeout: 5m
+    - id: deploy
+      name: Deploy application
+      dependsOn: [migrate]
+      executor:
+        type: process
+        executable: ./bin/deploy
+        args: ["--environment", "staging"]
+        cwd: /workspace/app
+        timeout: 10m

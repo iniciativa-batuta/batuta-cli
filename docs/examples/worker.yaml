@@ -1,0 +1,32 @@
+service_url: http://127.0.0.1:8080
+worker_id: wkr_01JQ8Z7A1B2C3D4E5F6G7H8J9K
+credential_file: /home/user/.config/batuta/worker.token
+state_dir: /home/user/.local/state/batuta/worker
+
+name: workstation
+labels:
+  toolchain: go1.24
+capabilities:
+  os: linux
+  arch: amd64
+  executors: [process]
+max_concurrency: 1
+
+poll:
+  wait: 30s
+  jitter: 2s
+  retry_after: 1500ms
+
+heartbeat:
+  interval: 15s
+
+executors:
+  process:
+    allowed_roots:
+      - /workspace
+    max_stdout_bytes: 1048576
+    max_stderr_bytes: 1048576
+  shell:
+    enabled: false
+    allowed_shells:
+      - /bin/bash

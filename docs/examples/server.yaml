@@ -1,0 +1,31 @@
+listen: 127.0.0.1:8080
+public_url: http://127.0.0.1:8080
+database: /var/lib/batuta/batuta.db
+
+auth:
+  admin_token_file: /etc/batuta/admin.token
+  enrollment_token_ttl: 15m
+
+worker:
+  heartbeat_interval: 15s
+  offline_after: 45s
+  snapshot_interval: 5s
+  snapshot_stale_after: 30s
+  request_timeout: 10s
+  cancel_timeout: 30s
+  offline_execution_timeout: 10m
+
+limits:
+  max_body_bytes: 1048576
+  max_snapshot_bytes: 262144
+  max_inline_payload_bytes: 65536
+  max_artifact_bytes: 1073741824
+
+tls:
+  enabled: false
+  cert_file: ""
+  key_file: ""
+
+logging:
+  level: info
+  format: json

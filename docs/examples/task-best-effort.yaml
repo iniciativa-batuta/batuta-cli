@@ -1,0 +1,38 @@
+apiVersion: batuta/v1
+kind: Task
+metadata:
+  project: demo
+  name: multi-check
+spec:
+  priority: low
+  continuity: BEST_EFFORT
+  timeout: 45m
+  steps:
+    - id: lint
+      name: Lint
+      executor:
+        type: process
+        executable: golangci-lint
+        args: ["run"]
+        cwd: /workspace/app
+    - id: unit
+      name: Unit tests
+      executor:
+        type: process
+        executable: go
+        args: ["test", "./..."]
+        cwd: /workspace/app
+    - id: docs
+      name: Check documentation links
+      executor:
+        type: process
+        executable: ./bin/check-docs
+        cwd: /workspace/app
+    - id: package
+      name: Build release binary
+      dependsOn: [unit]
+      executor:
+        type: process
+        executable: go
+        args: ["build", "-o", "dist/batuta", "./cmd/batuta"]
+        cwd: /workspace/app

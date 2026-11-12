@@ -1,0 +1,50 @@
+apiVersion: batuta/v1
+kind: Task
+metadata:
+  project: demo
+  name: test-and-package
+  labels:
+    suite: backend
+spec:
+  priority: normal
+  continuity: CONTINUE_ON_ERROR
+  timeout: 30m
+  requirements:
+    os: linux
+    arch: amd64
+    executors: [process]
+    labels:
+      toolchain: go1.24
+  dependsOn: []
+  steps:
+    - id: deps
+      name: Download dependencies
+      executor:
+        type: process
+        executable: go
+        args: ["mod", "download"]
+        cwd: /workspace/app
+        timeout: 5m
+    - id: test
+      name: Run tests
+      dependsOn: [deps]
+      executor:
+        type: process
+        executable: go
+        args: ["test", "./..."]
+        cwd: /workspace/app
+        env:
+          CGO_ENABLED: "0"
+        timeout: 15m
+        output:
+          stdout_limit_bytes: 2097152
+          stderr_limit_bytes: 2097152
+    - id: package
+      name: Build release binary
+      dependsOn: [test]
+      executor:
+        type: process
+        executable: go
+        args: ["build", "-trimpath", "-o", "dist/batuta", "./cmd/batuta"]
+        cwd: /workspace/app
+        timeout: 10m

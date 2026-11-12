@@ -1,0 +1,28 @@
+{
+  "inline_payload": {
+    "schema": "batuta.payload/v1",
+    "kind": "application/json",
+    "encoding": "utf-8",
+    "size": 38,
+    "data": {
+      "tests": 128,
+      "failed": 0,
+      "duration_ms": 4210
+    }
+  },
+  "artifact_payload": {
+    "schema": "batuta.payload/v1",
+    "kind": "artifact",
+    "artifacts": [
+      {
+        "schema": "batuta.artifact/v1",
+        "id": "art_01JQ8Z8D1E2F3G4H5J6K7M8N9P",
+        "name": "test-report.json",
+        "media_type": "application/json",
+        "size": 4096,
+        "sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824",
+        "uri": "artifact://art_01JQ8Z8D1E2F3G4H5J6K7M8N9P"
+      }
+    ]
+  }
+}
