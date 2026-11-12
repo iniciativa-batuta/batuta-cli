@@ -166,7 +166,6 @@ issues with context, scope, acceptance criteria, and validation.
 - [Execution and steps](docs/architecture/execution-and-steps.md)
 - [Architecture decisions](docs/architecture/decisions.md)
 - [Examples](docs/examples/)
-- [Name evaluation](docs/NAME_EVALUATION.md)
 
 ## Contributing
 
@@ -187,5 +186,5 @@ AGPL-3.0. See [LICENSE](LICENSE).
 ## Name and trademark
 
 **Batuta** is the working product name. The name is not yet cleared for trademark
-registration or commercial launch. See [docs/NAME_EVALUATION.md](docs/NAME_EVALUATION.md)
-before making public brand commitments.
+registration or commercial launch. Do not make public brand commitments before the name
+is reviewed.
