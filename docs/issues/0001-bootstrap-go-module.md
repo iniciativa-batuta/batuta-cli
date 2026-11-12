@@ -18,7 +18,7 @@ behavior.
 - Add `internal/version` with `Version`, `Commit`, and `BuildDate` variables set through
   linker flags.
 - Add the package layout described in
-  [the README layout](../../README.md#planned-repository-layout),
+  [the README layout](https://github.com/iniciativa-batuta/batuta-cli/blob/main/README.md#planned-repository-layout),
   creating only packages that have code in this issue.
 - Add a `Makefile` with `build`, `test`, `vet`, `fmt`, and `clean` targets.
 - Document the exact Go version in `go.mod` and in the README development section.

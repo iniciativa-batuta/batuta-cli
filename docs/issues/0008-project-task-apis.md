@@ -26,7 +26,7 @@ Expose project and task creation, listing, inspection, and idempotent task appli
 - Normalize the YAML task definition to the canonical JSON spec and compute its hash.
 - Validate the spec with the domain package, including step graph validation.
 - Apply the idempotency rule from
-  [decisions.md](../architecture/decisions.md).
+  [decisions.md](https://github.com/iniciativa-batuta/batuta-cli/blob/main/docs/architecture/decisions.md).
 - Add pagination with `limit` and `cursor` for list endpoints.
 - Add tests for validation errors, idempotency, conflicts, pagination, and not-found
   cases.

@@ -8,7 +8,7 @@ create a task, assign it to a worker, observe step state, and recover from real 
 ## Objective
 
 Build an end-to-end validation harness and runbook that proves the MVP checklist in
-[the architecture overview](../architecture/overview.md#mvp-checklist).
+[the architecture overview](https://github.com/iniciativa-batuta/batuta-cli/blob/main/docs/architecture/overview.md#mvp-checklist).
 
 ## Scope
 

@@ -7,6 +7,11 @@ Scope, Out of scope, Acceptance criteria, Dependencies, Technical notes, and Val
 The same content is published as GitHub issues. When an issue changes, update the
 Markdown file and the GitHub issue together.
 
+The local prefix matches the GitHub issue number: `01` is
+[#1](https://github.com/iniciativa-batuta/batuta-cli/issues/1), `25` is
+[#25](https://github.com/iniciativa-batuta/batuta-cli/issues/25). The full list is in the
+[repository tracker](https://github.com/iniciativa-batuta/batuta-cli/issues).
+
 ## Index
 
 | # | Issue | Phase | Type / area | Priority | Depends on |
