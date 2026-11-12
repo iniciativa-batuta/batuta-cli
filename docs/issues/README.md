@@ -42,6 +42,15 @@ The local prefix matches the GitHub issue number: `01` is
 | 24 | [Add an optional OpenCode executor adapter](0024-opencode-executor.md) | 9 | feature / integrations | p2 | 15, 19, 20 |
 | 25 | [Add an optional web interface](0025-optional-web-interface.md) | 9 | feature / web | p2 | 14, 20 |
 
+## Milestones
+
+Two milestones group the tracker. They are organizational, not a promise of dates.
+
+- **MVP** — issues 01 through 22. Everything required to run a task end to end with
+  local and remote workers, including validation.
+- **Post-MVP** — issues 23 through 25. Optional integrations and the web interface,
+  built only after the MVP exit criteria are met.
+
 ## Dependency graph
 
 ```mermaid

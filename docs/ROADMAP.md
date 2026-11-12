@@ -9,7 +9,8 @@ exit criterion that can be demonstrated. Dates are intentionally absent.
 
 - Product vision, architecture, domain model, protocol, execution semantics, and
   decision records.
-- A reviewable work breakdown in [docs/issues](issues/README.md).
+- A reviewable work breakdown in [docs/issues](issues/README.md), grouped into the
+  `MVP` (phases 1–8) and `Post-MVP` (phase 9) milestones.
 - Organization-wide standards, templates, and repository baseline.
 
 **Exit criteria**
